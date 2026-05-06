@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoop Zonwering | Vakmanschap Sinds 1948</title>
+    
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/pv3MSRDN/favicon.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #0F172A; overflow-x: hidden; background-color: #fff; }
+        .logo-text { text-transform: uppercase; letter-spacing: 0.35em; font-weight: 900; color: #D9451F; font-size: 1.1rem; display: inline-block; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #f1f5f9; }
+        .img-container { overflow: hidden; border-radius: 2.5rem; position: relative; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); background-color: #f1f5f9; }
+        .img-zoom { transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1); width: 100%; height: 100%; object-fit: cover; min-height: 400px; }
+        .group:hover .img-container { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(217, 69, 31, 0.15); }
+        .group:hover .img-zoom { transform: scale(1.1); }
+        .hero-luxury {
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop');
+            background-attachment: fixed; background-position: center; background-size: cover;
+        }
+        .section-padding { padding: 100px 0; }
+        .price-row { display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 12px 0; transition: all 0.3s ease; align-items: center; }
+        .price-row:hover { background: #fcfcfc; padding-left: 15px; border-left: 4px solid #D9451F; border-radius: 0 8px 8px 0; }
+        .headline-bold { font-weight: 800; letter-spacing: -0.04em; line-height: 1; text-transform: uppercase; }
+        .btn-call-nav { background: #D9451F; color: #fff; padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.65rem; transition: all 0.4s; }
+        .btn-call-nav:hover { background: #000; transform: scale(1.1); }
+        .review-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); height: 100%; display: flex; flex-direction: column; background: #F8FAFC; border: 1px solid #F1F5F9; border-radius: 3rem; text-align: left; }
+        .star-red { color: #D9451F; font-size: 0.8rem; }
+        .page-fade-in { animation: pageFadeIn 0.6s ease forwards; display: block !important; }
+        .hidden-page { display: none; opacity: 0; transform: translateY(20px); }
+        @keyframes pageFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav fixed w-full top-0 z-[100] py-3">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <a href="javascript:void(0)" onclick="showPage('home')" class="logo-text">Stoop Zonwering</a>
+            <div class="hidden md:flex items-center space-x-6 text-[10px] font-bold uppercase tracking-widest">
+                <a href="javascript:void(0)" onclick="showPage('home')" class="hover:text-[#D9451F]">Home</a>
+                <a href="javascript:void(0)" onclick="showPage('prijzen')" class="hover:text-[#D9451F]">Service en Tent reparatie</a>
+                <a href="tel:0224552628" class="btn-call-nav"><i class="fa-solid fa-phone mr-2"></i> 0224 - 552628</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home-page" class="page-fade-in">
+        <section class="hero-luxury h-screen flex items-center justify-center text-center px-6">
+            <div data-aos="zoom-out" data-aos-duration="1500">
+                <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.5em] mb-6 opacity-80">Vakmanschap Sinds 1948</h4>
+                <h1 class="headline-bold text-5xl md:text-[100px] text-white mb-6 italic">Art of <br>Shade</h1>
+                <p class="text-white/80 max-w-xl mx-auto mb-10 text-sm md:text-base italic font-light leading-relaxed">
+                    Met <strong>Stoop Zonwering</strong> kiest u voor generaties aan ervaring. <br>
+                    Eerlijk advies en meesterlijke zonwering, door heel Noord-Holland.
+                </p>
+                <div class="flex flex-col items-center gap-5">
+                    <a href="tel:0224552628" class="bg-[#D9451F] text-white px-12 py-5 rounded-full font-bold uppercase text-[11px] tracking-widest hover:bg-black shadow-2xl transition-all">Bel direct: 0224 - 552628</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="headline-bold text-3xl md:text-5xl text-center mb-16 italic uppercase text-black" data-aos="fade-up">Onze Producten</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div onclick="showPage('gevel')" class="group cursor-pointer" data-aos="fade-up">
+                        <div class="img-container h-[400px] shadow-xl mb-6">
+                            <img src="https://i.ibb.co/q31DvBfw/Gevelzonwering.jpg" class="img-zoom" alt="Gevelzonwering">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-10 left-10 text-white text-left">
+                                <h3 class="text-xl font-extrabold uppercase italic mb-1">Gevelzonwering</h3>
+                                <p class="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D9451F] group-hover:text-white transition-colors mb-2 italic">Bekijk producten <i class="fa-solid fa-arrow-right ml-1"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="showPage('terras')" class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                        <div class="img-container h-[400px] shadow-xl mb-6">
+                            <img src="https://i.ibb.co/r2gc8gVn/Sun-Circle-Zonwering-Barneveld-Terrasscherm-knikarmscherm-project-extra-breed.jpg" class="img-zoom" alt="Terraszonwering">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-10 left-10 text-white text-left">
+                                <h3 class="text-xl font-extrabold uppercase italic mb-1">Terraszonwering</h3>
+                                <p class="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D9451F] group-hover:text-white transition-colors mb-2 italic">Bekijk producten <i class="fa-solid fa-arrow-right ml-1"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="showPage('rolluiken')" class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                        <div class="img-container h-[400px] shadow-xl mb-6">
+                            <img src="https://i.ibb.co/hFBMkNck/PENTO-P-strang.webp" alt="Rolluiken" class="img-zoom">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-10 left-10 text-white text-left">
+                                <h3 class="text-xl font-extrabold uppercase italic mb-1">Rolluiken</h3>
+                                <p class="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D9451F] group-hover:text-white transition-colors mb-2 italic">Bekijk producten <i class="fa-solid fa-arrow-right ml-1"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="showPage('serre')" class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                        <div class="img-container h-[400px] shadow-xl mb-6">
+                            <img src="https://i.ibb.co/B5FfhdLm/serre-zonwering-1.jpg" alt="Serre Zonwering" class="img-zoom">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-10 left-10 text-white text-left">
+                                <h3 class="text-xl font-extrabold uppercase italic mb-1">Serre Zonwering</h3>
+                                <p class="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D9451F] group-hover:text-white transition-colors mb-2 italic">Bekijk producten <i class="fa-solid fa-arrow-right ml-1"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-gray-50 overflow-hidden text-center">
+            <div class="max-w-7xl mx-auto px-6 text-black">
+                <h2 class="headline-bold text-3xl md:text-5xl text-center mb-16 italic uppercase" data-aos="fade-up">Wat klanten denken</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="review-card p-12" data-aos="fade-up">
+                        <div class="mb-6 flex space-x-1 star-red font-bold italic"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-gray-600 italic leading-relaxed mb-12">"Montageploeg werkte ontzettend netjes bij het plaatsen van de rolluiken."</p>
+                        <p class="font-bold text-xs uppercase tracking-widest text-gray-900 mt-auto">Fam. van Dijk, Schagen</p>
+                    </div>
+                    <div class="review-card p-12" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mb-6 flex space-x-1 star-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-gray-600 italic leading-relaxed mb-12">"Stoop gaf eerlijk advies over de mogelijkheden. Alles is vakkundig gemonteerd."</p>
+                        <p class="font-bold text-xs uppercase tracking-widest text-gray-900 mt-auto">Peter Smit, Tuitjenhorn</p>
+                    </div>
+                    <div class="review-card p-12" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mb-6 flex space-x-1 star-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-gray-600 italic leading-relaxed mb-12">"Al jaren klant bij Stoop. Ze staan altijd klaar voor reparatie."</p>
+                        <p class="font-bold text-xs uppercase tracking-widest text-gray-900 mt-auto">familie Bakker, Alkmaar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="bg-slate-900 rounded-[3.5rem] overflow-hidden flex flex-col lg:flex-row items-stretch shadow-2xl" data-aos="fade-up">
+                    <div class="lg:w-1/2 p-12 md:p-20 text-white flex flex-col justify-center">
+                        <h2 class="headline-bold text-3xl md:text-5xl mb-8 italic uppercase">Ons Werkgebied</h2>
+                        <p class="text-gray-400 mb-12 text-sm md:text-base italic leading-relaxed">
+                            Vanuit <strong>Tuitjenhorn</strong> bestrijken wij de gehele provincie <strong>Noord-Holland</strong>. Wij rijden dagelijks door de regio om onze klanten te voorzien van schaduw en comfort.
+                        </p>
+                        <div class="grid grid-cols-2 gap-y-6 gap-x-8 text-[10px] font-extrabold uppercase tracking-widest text-[#D9451F]">
+                            <div class="flex items-center space-x-3 text-white"><i class="fa-solid fa-location-dot text-[#D9451F]"></i> <span>Texel</span></div>
+                            <div class="flex items-center space-x-3 text-white"><i class="fa-solid fa-location-dot text-[#D9451F]"></i> <span>Alkmaar</span></div>
+                            <div class="flex items-center space-x-3 text-white"><i class="fa-solid fa-location-dot text-[#D9451F]"></i> <span>Bergen</span></div>
+                            <div class="flex items-center space-x-3 text-white"><i class="fa-solid fa-location-dot text-[#D9451F]"></i> <span>Heerhugowaard</span></div>
+                            <div class="flex items-center space-x-3 text-white"><i class="fa-solid fa-location-dot text-[#D9451F]"></i> <span>Den Helder</span></div>
+                            <div class="flex items-center space-x-3 text-white"><i class="fa-solid fa-location-dot text-[#D9451F]"></i> <span>Langedijk</span></div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1582050041567-9cfdd330d545?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+                    <div data-aos="fade-right">
+                        <h2 class="headline-bold text-4xl mb-8 italic text-[#D9451F]">Contact</h2>
+                        <p class="text-gray-500 mb-10 text-lg leading-relaxed font-light text-black">
+                            Vanuit het pittoreske Tuitjenhorn rijden wij door de gehele provincie. <strong>Stoop zonwering</strong> komt graag bij u langs voor eerlijk en vakkundig advies. <br><span class="text-xs italic text-black">tot wel 7 jaar garantie.</span>
+                        </p>
+                        <a href="tel:0224552628" class="bg-white p-10 rounded-[2.5rem] border border-gray-200 flex items-center space-x-6 hover:border-[#D9451F] group shadow-sm transition-all">
+                            <div class="bg-[#D9451F] text-white w-14 h-14 rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-all"><i class="fa-solid fa-phone"></i></div>
+                            <div><h4 class="font-bold text-xl text-black">Bellen</h4><p class="text-gray-500 font-bold">0224 - 552628</p></div>
+                        </a>
+                    </div>
+                    <div data-aos="fade-left" class="showroom-box bg-slate-900 text-white p-12 rounded-[3rem] shadow-2xl relative group">
+                        <h3 class="headline-bold text-2xl mb-8 italic">Showroom Info</h3>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between border-b border-white/10 pb-4"><span class="opacity-60 text-[10px]">Ma - Vr</span><span class="font-bold text-[10px]">08:30 - 17:00 (OP AFSPRAAK)</span></div>
+                            <div class="flex justify-between border-b border-white/10 pb-4"><span class="opacity-60 text-[10px]">Za - Zo</span><span class="text-[#D9451F] font-bold text-[10px]">GESLOTEN</span></div>
+                        </div>
+                        <p class="text-gray-400 text-sm italic">De Dijken 31, Tuitjenhorn</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="gevel-page" class="hidden-page pt-32 bg-white text-left">
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <button onclick="showPage('home')" class="mb-10 text-[#D9451F] font-bold uppercase text-xs hover:translate-x-[-5px] transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Terug</button>
+            <h2 class="headline-bold text-4xl mb-16 italic uppercase text-black">Gevelzonwering</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/YFgyYJ3b/Objekt-496-ROMA-Jenny-Haimerl-27-HIGH.webp" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Screens</h3><p class="text-gray-400 text-[10px] italic">Effectieve zonwering zonder verlies van zicht.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/3YszjZ7Y/scherm.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Uitvalschermen</h3><p class="text-gray-400 text-[10px] italic">De klassieker voor een koel huis.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/XkWDz3Y6/markiezen.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Markiezen</h3><p class="text-gray-400 text-[10px] italic">Nostalgische uitstraling en optimale bescherming.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/nMWRmvYX/Buiten-jalozie.webp" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Buitenjaloezieën</h3><p class="text-gray-400 text-[10px] italic">Perfecte lichtregulering met een moderne look.</p></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="terras-page" class="hidden-page pt-32 bg-white text-left">
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <button onclick="showPage('home')" class="mb-10 text-[#D9451F] font-bold uppercase text-xs hover:translate-x-[-5px] transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Terug</button>
+            <h2 class="headline-bold text-4xl mb-16 italic uppercase text-black">Terraszonwering</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/FkyM2DyB/Maak-uw-terras-klaar-voor-de-zomer-met-een-knikarmscherm-1-scaled.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Knikarmscherm</h3><p class="text-gray-400 text-[10px] italic">Geniet van schaduw op uw terras met vrije doorloop.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/Rksb2MWS/11-Pergola-zonwering-A-Gereduceerd.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Pergola</h3><p class="text-gray-400 text-[10px] italic">Stabiele zonwering, ook bij meer wind.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/S75BVG9D/warema-lammelen-dak.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Lamellendak</h3><p class="text-gray-400 text-[10px] italic">De ultieme luxe voor uw buitenleven.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/bg8F7Vf8/Whats-App-Image-2026-05-01-at-09-09-30.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Vouwdak</h3><p class="text-gray-400 text-[10px] italic">Flexibele overkapping voor alle weersomstandigheden.</p></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="rolluiken-page" class="hidden-page pt-32 bg-white text-left">
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <button onclick="showPage('home')" class="mb-10 text-[#D9451F] font-bold uppercase text-xs hover:translate-x-[-5px] transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Terug</button>
+            <h2 class="headline-bold text-4xl mb-16 italic uppercase text-black">Rolluiken</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/hFBMkNck/PENTO-P-strang.webp" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Pento.p</h3><p class="text-gray-400 text-[10px] italic">Vijfhoekige kast voor een moderne uitstraling.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/nq2WSsVr/QUADRO-P-strang.webp" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Quadro.p</h3><p class="text-gray-400 text-[10px] italic">Strakke vierkante vormgeving.</p></div>
+                <div class="group"><div class="img-container h-[350px] mb-6 shadow-lg"><img src="https://i.ibb.co/hxwvLDcd/rondo-p-S.webp" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Rondo.p</h3><p class="text-gray-400 text-[10px] italic">Zachte, ronde lijnen voor uw gevel.</p></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="serre-page" class="hidden-page pt-32 bg-white text-left">
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <button onclick="showPage('home')" class="mb-10 text-[#D9451F] font-bold uppercase text-xs hover:translate-x-[-5px] transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Terug</button>
+            <h2 class="headline-bold text-4xl mb-16 italic uppercase text-black">Serre Zonwering</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="group"><div class="img-container h-[450px] mb-6 shadow-lg"><img src="https://i.ibb.co/Kc08YmkB/Whats-App-Image-2026-05-01-at-12-17-40.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Boven glas</h3><p class="text-gray-400 text-[10px] italic">Maximale warmtewering aan de buitenzijde.</p></div>
+                <div class="group"><div class="img-container h-[450px] mb-6 shadow-lg"><img src="https://i.ibb.co/397M0kWT/Whats-App-Image-2026-05-01-at-10-54-31.jpg" class="img-zoom"></div><h3 class="text-xl font-bold uppercase italic text-[#D9451F]">Onderglas</h3><p class="text-gray-400 text-[10px] italic">Sfeervolle zonwering onder uw dak.</p></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="prijzen-page" class="hidden-page pt-32 bg-white text-left">
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <h2 class="headline-bold text-4xl mb-12 italic text-center uppercase text-black">Service en Tent reparatie</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 border-b-2 border-[#D9451F] pb-1 uppercase italic text-black">Zonwering Reparatie</h3>
+                    <p class="text-[10px] text-gray-400 mb-4 italic">Inclusief BTW, arbeidsloon en materiaal zonder toeslag verdieping</p>
+                    <div class="space-y-1 text-black text-sm">
+                        <div class="price-row"><div><strong>Band</strong><p class="text-[9px] text-gray-400">Uitvalscherm, screen of rolluik bg</p></div><span class="font-bold">€ 85</span></div>
+                        <div class="price-row"><div><strong>Bandwinder</strong><p class="text-[9px] text-gray-400">Uitvalscherm, screen of rolluik bg</p></div><span class="font-bold">€ 85</span></div>
+                        <div class="price-row"><div><strong>Combinatie band</strong><p class="text-[9px] text-gray-400">Bandwinder en band</p></div><span class="font-bold">€ 145</span></div>
+                        <div class="price-row"><div><strong>Staaldraad</strong><p class="text-[9px] text-gray-400">Uitvalscherm, screen of rolluik bg</p></div><span class="font-bold">€ 120</span></div>
+                        <div class="price-row"><div><strong>Windwerk staaldraad</strong><p class="text-[9px] text-gray-400">Uitvalscherm, screen of rolluik bg</p></div><span class="font-bold">€ 165</span></div>
+                        <div class="price-row"><div><strong>Combinatie Staaldraad</strong><p class="text-[9px] text-gray-400">Windwerk en staaldraad</p></div><span class="font-bold">€ 230</span></div>
+                        <div class="price-row"><div><strong>Oogwindwerk</strong><p class="text-[9px] text-gray-400">Klassiek of modern, p. st.</p></div><span class="font-bold">€ 145</span></div>
+                        <div class="price-row"><div><strong>Oogwindwerk</strong><p class="text-[9px] text-gray-400">Knikarmscherm, p. st.</p></div><span class="font-bold">€ 185</span></div>
+                        <div class="price-row"><div><strong>Motor</strong><p class="text-[9px] text-gray-400">Uitval/Screen/Rolluik, p. element</p></div><span class="font-bold">€ 485</span></div>
+                        <div class="price-row"><div><strong>Motor</strong><p class="text-[9px] text-gray-400">Rolluik/Screen/Uitval, p. motor</p></div><span class="font-bold">€ 385</span></div>
+                        <div class="price-row"><div><strong>Toeslag RTS/IO</strong><p class="text-[9px] text-gray-400">Draadloze bediening</p></div><span class="font-bold">€ 135</span></div>
+                        <div class="price-row"><div><strong>Opbouwschakelaar</strong><p class="text-[9px] text-gray-400">Gemonteerd</p></div><span class="font-bold">€ 95</span></div>
+                        <div class="price-row border-none"><div><strong>Serre koorden</strong><p class="text-[9px] text-gray-400">Per element</p></div><span class="font-bold">€ 585</span></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 border-b-2 border-black pb-1 uppercase italic text-black">Algemene Tarieven</h3>
+                    <div class="space-y-1 text-black text-sm mb-12">
+                        <div class="price-row"><div><strong>Starttarief</strong><p class="text-[9px] text-gray-400">Inclusief 1 uur met 2 monteurs</p></div><span class="font-bold">€ 175</span></div>
+                        <div class="price-row"><div><strong>Schouw afspraak</strong><p class="text-[9px] text-gray-400">Verrekend na opdracht</p></div><span class="font-bold">€ 65</span></div>
+                        <div class="price-row"><div><strong>Uurtarief monteur</strong><p class="text-[9px] text-gray-400">Gerekend per half uur</p></div><span class="font-bold">€ 65</span></div>
+                        <div class="price-row"><div><strong>Toeslag Ladders</strong><p class="text-[9px] text-gray-400">1e verdieping</p></div><span class="font-bold">€ 65</span></div>
+                        <div class="price-row"><div><strong>Toeslag Steiger</strong><p class="text-[9px] text-gray-400">2e verdieping</p></div><span class="font-bold">€ 235</span></div>
+                        <div class="price-row border-none"><div><strong>Hoogwerker</strong><p class="text-[9px] text-gray-400">Eerste 2 uur (daarna 100 p. u.)</p></div><span class="font-bold">€ 420</span></div>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 border-b-2 border-black pb-1 uppercase italic text-black">Doek Vervangen</h3>
+                    <div class="space-y-1 text-black text-sm">
+                        <div class="price-row"><div><strong>Zonwering doek</strong><p class="text-[9px] text-gray-400">Acryl in banen, per m2</p></div><span class="font-bold">€ 45,00</span></div>
+                        <div class="price-row"><div><strong>Screen doek</strong><p class="text-[9px] text-gray-400">Geconfectioneerd, per m2</p></div><span class="font-bold">€ 65,00</span></div>
+                        <div class="price-row"><div><strong>Opmeten doek</strong><p class="text-[9px] text-gray-400">Per adres</p></div><span class="font-bold">€ 65,00</span></div>
+                        <div class="price-row border-none"><div><strong>Inzetkosten doek</strong><p class="text-[9px] text-gray-400">Per eenheid</p></div><span class="font-bold">€ 185,00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10 border-t-4 border-gray-100">
+                <h3 class="text-2xl font-bold mb-4 uppercase italic text-[#D9451F]">Tent Reparatie</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 text-sm text-black mb-20">
+                    <div class="price-row"><div><strong>Kleine reparaties</strong></div><span class="font-bold">vanaf € 22,50</span></div>
+                    <div class="price-row"><div><strong>Reparatie basis</strong></div><span class="font-bold">€ 15,00</span></div>
+                    <div class="price-row"><div><strong>Deurrits rond vervangen</strong></div><span class="font-bold">€ 130,00</span></div>
+                    <div class="price-row"><div><strong>Rits vervangen</strong><p class="text-[9px] text-gray-400">Per meter</p></div><span class="font-bold">€ 40,00</span></div>
+                    <div class="price-row"><div><strong>Raam vervangen</strong><p class="text-[9px] text-gray-400">Per meter</p></div><span class="font-bold">€ 75,00</span></div>
+                    <div class="price-row"><div><strong>Gaas vervangen</strong><p class="text-[9px] text-gray-400">Per meter</p></div><span class="font-bold">€ 85,00</span></div>
+                    <div class="price-row"><div><strong>Pees enkel vervangen</strong><p class="text-[9px] text-gray-400">Per meter</p></div><span class="font-bold">€ 22,00</span></div>
+                    <div class="price-row"><div><strong>Pees dubbel vervangen</strong><p class="text-[9px] text-gray-400">Per meter</p></div><span class="font-bold">€ 30,00</span></div>
+                    <div class="price-row"><div><strong>Slibrand vervangen</strong><p class="text-[9px] text-gray-400">Per meter</p></div><span class="font-bold">€ 24,00</span></div>
+                    <div class="price-row"><div><strong>Zeilring vervangen</strong><p class="text-[9px] text-gray-400">Per stuk</p></div><span class="font-bold">€ 25,00</span></div>
+                    <div class="price-row"><div><strong>Grondzeil oog/lus</strong><p class="text-[9px] text-gray-400">Per stuk</p></div><span class="font-bold">€ 22,50</span></div>
+                    <div class="price-row"><div><strong>Petluifel hoek</strong><p class="text-[9px] text-gray-400">Per stuk</p></div><span class="font-bold">€ 45,00</span></div>
+                    <div class="price-row"><div><strong>Tourniquet ingeslagen</strong><p class="text-[9px] text-gray-400">Per stuk</p></div><span class="font-bold">€ 3,00</span></div>
+                    <div class="price-row"><div><strong>Tourniquet draai deel</strong><p class="text-[9px] text-gray-400">Per stuk</p></div><span class="font-bold">€ 3,00</span></div>
+                    <div class="price-row"><div><strong>Zeilring ingeslagen</strong><p class="text-[9px] text-gray-400">Per stuk</p></div><span class="font-bold">€ 2,50</span></div>
+                    <div class="price-row"><div><strong>Doorstikken naden</strong></div><span class="font-bold">vanaf € 85,00</span></div>
+                    <div class="price-row border-none"><div><strong>Versmallen luifel</strong></div><span class="font-bold">vanaf € 100,00</span></div>
+                </div>
+            </div>
+            <div class="mt-10 text-center"><button onclick="showPage('home')" class="font-bold border-b-2 border-black pb-1 uppercase hover:text-[#D9451F] text-black">Terug naar Home</button></div>
+        </section>
+    </div>
+
+    <footer class="py-12 bg-gray-100 text-center border-t border-gray-200">
+        <p class="text-[9px] uppercase tracking-[0.5em] font-bold text-gray-400 italic">© 2026 Stoop Zonwering all rights reserved — Noord-Holland — 0224 - 552628</p>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 1000, once: false });
+        function showPage(pageId) {
+            const pages = ['home-page', 'prijzen-page', 'gevel-page', 'terras-page', 'serre-page', 'rolluiken-page'];
+            pages.forEach(p => { 
+                const el = document.getElementById(p); 
+                if(el) { el.style.display = 'none'; el.classList.remove('page-fade-in'); } 
+            });
+            const target = document.getElementById(pageId + '-page');
+            if(target) { target.style.display = 'block'; setTimeout(() => target.classList.add('page-fade-in'), 10); }
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
