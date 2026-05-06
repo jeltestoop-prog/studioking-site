@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoopwebsites | Premium Webdesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700;900&display=swap');
+        
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            background-color: #0b0d10; 
+            color: #ffffff; 
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        .sw-orange { color: #E8601A; }
+        .sw-bg-orange { background-color: #E8601A; }
+        .glass-nav { background: rgba(11, 13, 16, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 40px rgba(232,96,26,0.1); }
+            50% { box-shadow: 0 0 80px rgba(232,96,26,0.3); }
+            100% { box-shadow: 0 0 40px rgba(232,96,26,0.1); }
+        }
+        
+        .animate-fade-in-1 { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; animation-delay: 0.2s; }
+        .animate-fade-in-2 { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; animation-delay: 0.4s; }
+        .animate-fade-in-3 { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; animation-delay: 0.6s; }
+        
+        .logo-glow { animation: pulseGlow 4s infinite alternate; }
+        
+        .btn-premium { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .btn-premium:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(232,96,26,0.25); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigatie -->
+    <nav class="fixed w-full z-50 py-5 px-6 md:px-12 glass-nav flex justify-between items-center transition-all">
+        <a href="index.html" class="flex items-center gap-3 text-xl font-black tracking-tighter cursor-pointer group">
+            <img src="https://i.ibb.co/PXsDvBf/Gemini-Generated-Image-oahncgoahncgoahn.png" alt="Stoopwebsites" class="w-10 h-10 rounded-full border-2 border-white/10 group-hover:border-[#E8601A] transition-all duration-500">
+            STOOP<span class="sw-orange">WEBSITES</span>
+        </a>
+        <div class="flex gap-8 items-center">
+            <a href="portfolio.html" class="hidden md:block text-[11px] uppercase tracking-widest font-bold text-gray-400 hover:text-white hover:sw-orange transition-all">Projecten</a>
+            <a href="tel:+31627554846" class="bg-white text-black px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-widest hover:sw-bg-orange hover:text-white transition-all btn-premium italic">Neem contact op</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 relative pt-20">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] sw-bg-orange rounded-full opacity-[0.04] blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-5xl text-center z-10 w-full">
+            <div class="mb-12 flex justify-center animate-fade-in-1">
+                <div class="relative">
+                    <div class="absolute inset-0 rounded-full logo-glow"></div>
+                    <img src="https://i.ibb.co/PXsDvBf/Gemini-Generated-Image-oahncgoahncgoahn.png" alt="Stoopwebsites Logo" class="relative w-32 h-32 md:w-44 md:h-44 rounded-full border border-white/10 z-10 bg-[#12151A] p-2">
+                </div>
+            </div>
+            
+            <h1 class="text-6xl md:text-[110px] font-black mb-6 leading-[0.9] tracking-tighter animate-fade-in-2">
+                Sites die <br>
+                <span class="sw-orange italic font-bold">het verschil</span> maken.
+            </h1>
+            
+            <p class="text-gray-400 max-w-2xl mx-auto mb-12 text-lg md:text-xl font-light animate-fade-in-3 leading-relaxed">
+                Professioneel webdesign uit Oudkarspel. Ik bouw razendsnelle, moderne websites die jouw klanten wél overtuigen. Geen gedoe, gewoon resultaat.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center animate-fade-in-3">
+                <!-- Linkt naar het losse portfolio.html bestand -->
+                <a href="portfolio.html" class="sw-bg-orange px-10 py-5 rounded-full font-bold uppercase text-[12px] tracking-widest text-white btn-premium flex items-center justify-center gap-3">
+                    Bekijk projecten <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="tel:+31627554846" class="border border-white/20 bg-white/5 text-white hover:bg-white hover:text-black px-10 py-5 rounded-full font-bold uppercase text-[12px] tracking-widest transition-all btn-premium italic flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone"></i> 06 - 27 55 48 46
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
